@@ -1,0 +1,89 @@
+<% layout("layouts/boilerplate") %>
+<div class="row">
+  <div class="col-8 offset-2">
+        <br> <br>
+     <h3>Create a New Listing</h3>
+     <form method="POST" action="/listings" novalidate class="needs-validation" enctype="multipart/form-data">
+        <div class="mb-3">     
+            <label for="title" class="form-label">Title</label>
+            <input name="listing[title]" placeholder="enter title" type="text" class="form-control"  />
+            <div class="valid-feedback">Title looks good!</div>
+        </div>
+   
+      
+
+       <div class="mb-3">
+         <label for="description" class="form-label">Description</label>
+         <textarea name="listing[description]" placeholder="enter description" class="form-control" required></textarea>
+         <div class="invalid-feedback">please enter proper description</div>
+        </div>
+
+      
+
+       <!-- <div class="mb-3">
+         <label for="image" class="form-label">Image</label>
+         <input name="listing[image]"  placeholder="enter image URL/Link" type="text" class="form-control"/>
+       </div> -->
+
+       <div class="mb-3">
+        <label for="image" class="form-label">Upload Listing Image</label>
+        <input name="listing[image]"   type="file" class="form-control"/>
+      </div>
+
+      
+      <!-- <div class="dropdown mb-3">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Select
+        </button>
+        <ul class="dropdown-menu">
+          <li><button class="dropdown-item" type="button">Trending</button></li>
+          <li><button class="dropdown-item" type="button">Rooms</button></li>
+          <li><button class="dropdown-item" type="button">Iconic cities</button></li>
+          <li><button class="dropdown-item" type="button">Mountains</button></li>
+          <li><button class="dropdown-item" type="button">Castles</button></li>
+          <li><button class="dropdown-item" type="button">Amazing Pools</button></li>
+          <li><button class="dropdown-item" type="button">Camping</button></li>
+          <li><button class="dropdown-item" type="button">Farms</button></li>
+          <li><button class="dropdown-item" type="button">Arctic</button></li>
+          <li><button class="dropdown-item" type="button">Domes</button></li>
+          <li><button class="dropdown-item" type="button">Beaches</button></li>
+        </ul>
+      </div> -->
+
+      <div class="mb-3">
+        <label for="category" class="form-label">Category</label>
+        <input name="listing[category]" placeholder="enter Category" class="form-control" required/>
+        <div class="invalid-feedback">please enter proper Category</div>
+       </div>
+
+     <div class="row">
+       <div class="mb-3 col-md-4">
+         <label for="price" class="form-label">Price</label>
+         <input name="listing[price]" placeholder="enter price"  class="form-control "required/>
+         <div class="invalid-feedback">please enter valid price</div>
+       </div>
+      
+
+       <div class="mb-3 col-md-8">
+          <label for="country" class="form-label">Country</label>
+          <input name="listing[country]" placeholder="enter country" type="text" class="form-control" required/>
+          <div class="invalid-feedback">please enter valid name</div>
+       </div>
+     </div>
+       
+
+       <div class="mb-3">
+        <label for="location" class="form-label">Location</label>
+       <input  name="listing[location]"  placeholder="enter location"  type="text" class="form-control" required/>
+       <div class="invalid-feedback">please enter valid location</div>
+      </div>
+
+      <br> <br>
+
+       <button class="btn btn-dark add-btn">Add</button>
+       <br> <br>
+     </form>
+   </body>
+  </html>
+ </div>
+</div>
