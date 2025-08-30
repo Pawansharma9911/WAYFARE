@@ -157,8 +157,8 @@ app.delete("/listings/:id/reviews/:reviewId",isLoggedIn,isReviewAuthor, wrapAsyn
   await Review.findByIdAndDelete(reviewId);
   await Listing.findByIdAndUpdate(id, {$pull: {reviews: reviewId}});
   req.flash("success", "review deleted");
-  res.send("good");
-  //res.redirect(`/listings/${id}`);
+ // res.send("good");
+  res.redirect(`/listings/${id}`);
 }));
   
 
